@@ -59,7 +59,8 @@
      NAV
      ============================================================ */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed;
+    top: 38px; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1rem 2rem;
     background: rgba(15, 18, 56, 0);
@@ -482,13 +483,12 @@
   }
 
 
-  .hero-countdown { margin: 1.2rem 0 1.8rem; }
-  .cd-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.7rem; }
-  .cd-boxes { display: flex; align-items: center; gap: 0.5rem; }
-  .cd-box { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 0.6rem 1rem; text-align: center; min-width: 58px; }
-  .cd-box span { font-family: Georgia, serif; font-size: 1.7rem; font-weight: 700; color: var(--yellow); display: block; line-height: 1; }
-  .cd-unit { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.25rem; }
-  .cd-sep { font-size: 1.3rem; color: var(--yellow); font-weight: 700; padding-bottom: 1.2rem; }
+  .cd-boxes { display: flex; align-items: center; gap: 0.4rem; }
+  .cd-box { background: rgba(15,18,56,0.15); border-radius: 6px; padding: 0.25rem 0.6rem; text-align: center; min-width: 42px; }
+  .cd-box span { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--navy-deep); display: block; line-height: 1; }
+  .cd-unit { font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(15,18,56,0.55); margin-top: 0.15rem; }
+  .cd-sep { font-size: 1rem; color: var(--navy-deep); font-weight: 700; padding-bottom: 0.8rem; }
+  @media (max-width:600px){ #cd-topbar span:first-child { display:none; } }
 
   .ideal-grid { display: flex; flex-direction: column; gap: 4rem; }
   .ideal-card { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -511,6 +511,21 @@
 </style>
 </head>
 <body>
+<!-- COUNTDOWN TOPBAR -->
+<div id="cd-topbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--yellow);display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:0.5rem 1rem;flex-wrap:wrap;">
+  <span style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-deep);font-weight:700;white-space:nowrap;">10.10.2026 · Milão · O evento começa em</span>
+  <div class="cd-boxes">
+    <div class="cd-box"><span id="cd-days">00</span><div class="cd-unit">dias</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><span id="cd-hours">00</span><div class="cd-unit">horas</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><span id="cd-mins">00</span><div class="cd-unit">min</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><span id="cd-secs">00</span><div class="cd-unit">seg</div></div>
+  </div>
+  <a href="#vendas" style="background:var(--navy-deep);color:var(--yellow);font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;white-space:nowrap;">Quero meu ingresso →</a>
+</div>
+
 
 
 <!-- NAV -->
@@ -552,18 +567,6 @@
         </div>
       </div>
 
-      <div class="hero-countdown">
-        <div class="cd-label">O evento começa em</div>
-        <div class="cd-boxes">
-          <div class="cd-box"><span id="cd-days">00</span><div class="cd-unit">dias</div></div>
-          <div class="cd-sep">:</div>
-          <div class="cd-box"><span id="cd-hours">00</span><div class="cd-unit">horas</div></div>
-          <div class="cd-sep">:</div>
-          <div class="cd-box"><span id="cd-mins">00</span><div class="cd-unit">min</div></div>
-          <div class="cd-sep">:</div>
-          <div class="cd-box"><span id="cd-secs">00</span><div class="cd-unit">seg</div></div>
-        </div>
-      </div>
       <a href="https://www.eventbrite.com.br/e/4-brasileiros-inspiradores-na-europa-tickets-1989911798757?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=wsa&aff=ebdsshwebmobile" target="_blank" class="btn btn-primary">Quero meu ingresso agora</a>
       <a href="#vendas" class="btn btn-outline" style="margin-left:0.8rem;">Ver opções</a>
       <div class="hero-tag">O maior evento brasileiro de empreendedorismo na Europa</div>
