@@ -482,14 +482,15 @@
   }
 
 
-  .countdown-strip { background: var(--navy-deep); padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.08); }
-  .countdown-strip .container { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-  .cd-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
-  .cd-boxes { display: flex; align-items: center; gap: 0.5rem; }
-  .cd-box { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 0.8rem 1.2rem; text-align: center; min-width: 64px; }
-  .cd-box span { font-family: Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--yellow); display: block; line-height: 1; }
-  .cd-unit { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.3rem; }
-  .cd-sep { font-size: 1.6rem; color: var(--yellow); font-weight: 700; padding-bottom: 1rem; }
+  .cd-topbar { position: sticky; top: 0; z-index: 1000; background: var(--yellow); display: flex; align-items: center; justify-content: center; gap: 1.2rem; padding: 0.55rem 1.5rem; flex-wrap: wrap; }
+  .cd-topbar-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy-deep); font-weight: 600; white-space: nowrap; }
+  .cd-boxes { display: flex; align-items: center; gap: 0.35rem; }
+  .cd-box { background: rgba(15,18,56,0.12); border-radius: 6px; padding: 0.25rem 0.55rem; text-align: center; min-width: 40px; }
+  .cd-box span { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--navy-deep); display: block; line-height: 1; }
+  .cd-unit { font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(15,18,56,0.6); margin-top: 0.15rem; }
+  .cd-sep { font-size: 1rem; color: var(--navy-deep); font-weight: 700; }
+  .cd-topbar-cta { background: var(--navy-deep); color: var(--yellow); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.45rem 1rem; border-radius: 6px; text-decoration: none; white-space: nowrap; }
+  @media (max-width: 600px) { .cd-topbar-label { display: none; } .cd-topbar-cta { display: none; } }
 
   .ideal-grid { display: flex; flex-direction: column; gap: 4rem; }
   .ideal-card { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -504,6 +505,22 @@
 </style>
 </head>
 <body>
+<!-- COUNTDOWN TOPBAR -->
+<div class="cd-topbar">
+  <span class="cd-topbar-label">10 · 10 · 2026 — Milão &nbsp;|&nbsp; O evento começa em</span>
+  <div class="cd-boxes">
+    <div class="cd-box"><span id="cd-days">00</span><div class="cd-unit">dias</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><span id="cd-hours">00</span><div class="cd-unit">horas</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><span id="cd-mins">00</span><div class="cd-unit">min</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><span id="cd-secs">00</span><div class="cd-unit">seg</div></div>
+  </div>
+  <a href="https://www.eventbrite.com.br/e/4-brasileiros-inspiradores-na-europa-tickets-1989911798757" target="_blank" class="cd-topbar-cta">Quero meu ingresso agora →</a>
+</div>
+
+
 
 <!-- NAV -->
 <nav id="nav">
@@ -555,22 +572,6 @@
   </div>
 </header>
 
-
-<!-- COUNTDOWN -->
-<section class="countdown-strip">
-  <div class="container">
-    <div class="cd-label">O evento começa em</div>
-    <div class="cd-boxes">
-      <div class="cd-box"><span id="cd-days">00</span><div class="cd-unit">dias</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-box"><span id="cd-hours">00</span><div class="cd-unit">horas</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-box"><span id="cd-mins">00</span><div class="cd-unit">min</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-box"><span id="cd-secs">00</span><div class="cd-unit">seg</div></div>
-    </div>
-  </div>
-</section>
 
 <!-- SOBRE -->
 <section class="sobre" id="sobre">
