@@ -573,10 +573,11 @@
       <a href="#vendas" class="btn btn-outline" style="margin-left:0.8rem;">Ver opções</a>
       <div class="hero-tag">O maior evento brasileiro de empreendedorismo na Europa</div>
     </div>
-    <div class="hero-video-col">
-      <video class="hero-vid" muted playsinline autoplay loop preload="auto">
+    <div class="hero-video-col" style="position:relative;">
+      <video class="hero-vid" id="hero-vid" muted playsinline autoplay loop preload="auto">
         <source src="video_intro.mp4" type="video/mp4">
       </video>
+      <button id="mute-btn" onclick="toggleMute()" style="position:absolute;bottom:1rem;right:1rem;background:rgba(0,0,0,0.6);border:none;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;z-index:10;color:#fff;">🔇</button>
     </div>
   </div>
 </header>
@@ -1012,6 +1013,16 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 });
+</script>
+
+<script>
+function toggleMute(){
+  var v = document.getElementById('hero-vid');
+  var btn = document.getElementById('mute-btn');
+  if(!v) return;
+  v.muted = !v.muted;
+  btn.textContent = v.muted ? '🔇' : '🔊';
+}
 </script>
 </body>
 </html>
