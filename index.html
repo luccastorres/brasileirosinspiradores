@@ -525,7 +525,7 @@
     <div class="cd-sep">:</div>
     <div class="cd-box"><span id="cd-secs">00</span><div class="cd-unit">seg</div></div>
   </div>
-  <a href="#vendas" style="background:var(--navy-deep);color:var(--yellow);font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;white-space:nowrap;">Quero meu ingresso →</a>
+  <a href="#" onclick="openLeadPopup(event)" style="background:var(--navy-deep);color:var(--yellow);font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;white-space:nowrap;">Quero meu ingresso →</a>
 </div>
 
 
@@ -952,17 +952,17 @@
 </script>
 
 <!-- LEAD POPUP -->
-<div id="lead-popup" style="display:none; position:fixed; inset:0; background:rgba(15,18,56,0.85); z-index:9999; align-items:center; justify-content:center; padding:1rem;">
-  <div style="background:#fff; border-radius:20px; padding:2.5rem 2rem; max-width:420px; width:100%; position:relative;">
-    <button onclick="document.getElementById('lead-popup').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#999;">✕</button>
-    <div style="color:var(--magenta);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Quase lá!</div>
-    <h3 style="color:var(--navy-deep);font-family:Georgia,serif;font-size:1.4rem;margin-bottom:0.4rem;">Antes de garantir seu ingresso</h3>
-    <p style="color:#666;font-size:0.9rem;margin-bottom:1.5rem;">Deixe seus dados para receber as informações do evento e novidades exclusivas.</p>
-    <input id="lead-nome" type="text" placeholder="Seu nome" style="width:100%;padding:0.9rem 1rem;border:1.5px solid #ddd;border-radius:10px;font-size:0.95rem;margin-bottom:0.8rem;box-sizing:border-box;">
-    <input id="lead-email" type="email" placeholder="Seu e-mail" style="width:100%;padding:0.9rem 1rem;border:1.5px solid #ddd;border-radius:10px;font-size:0.95rem;margin-bottom:0.8rem;box-sizing:border-box;">
-    <input id="lead-tel" type="tel" placeholder="WhatsApp (com código do país)" style="width:100%;padding:0.9rem 1rem;border:1.5px solid #ddd;border-radius:10px;font-size:0.95rem;margin-bottom:1.2rem;box-sizing:border-box;">
-    <button onclick="submitLead()" style="width:100%;background:var(--yellow);color:var(--navy-deep);border:none;border-radius:10px;padding:1rem;font-size:0.88rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Quero meu ingresso agora →</button>
-    <p style="text-align:center;font-size:0.75rem;color:#aaa;margin-top:0.8rem;">Você será redirecionado para a página de pagamento</p>
+<div id="lead-popup" style="display:none; position:fixed; inset:0; background:rgba(15,18,56,0.92); z-index:99999; align-items:center; justify-content:center; padding:1rem;">
+  <div style="background:#fff; border-radius:20px; padding:2.5rem 2rem; max-width:440px; width:100%; position:relative; box-shadow:0 32px 80px rgba(0,0,0,0.4);">
+    <button onclick="document.getElementById('lead-popup').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#bbb;line-height:1;">✕</button>
+    <div style="color:var(--magenta);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.6rem;font-weight:700;">Quase lá!</div>
+    <h3 style="color:var(--navy-deep);font-family:Georgia,serif;font-size:1.5rem;margin-bottom:0.4rem;line-height:1.2;">Antes de garantir<br>seu ingresso</h3>
+    <p style="color:#777;font-size:0.88rem;margin-bottom:1.6rem;line-height:1.5;">Deixe seus dados para receber informações do evento e novidades exclusivas.</p>
+    <input id="lead-nome" type="text" placeholder="Seu nome completo" style="width:100%;padding:0.85rem 1rem;border:1.5px solid #e0e0e0;border-radius:10px;font-size:0.95rem;margin-bottom:0.75rem;box-sizing:border-box;font-family:inherit;" onfocus="this.style.borderColor='#9B2D6E'" onblur="this.style.borderColor='#e0e0e0'">
+    <input id="lead-email" type="email" placeholder="Seu melhor e-mail" style="width:100%;padding:0.85rem 1rem;border:1.5px solid #e0e0e0;border-radius:10px;font-size:0.95rem;margin-bottom:0.75rem;box-sizing:border-box;font-family:inherit;" onfocus="this.style.borderColor='#9B2D6E'" onblur="this.style.borderColor='#e0e0e0'">
+    <input id="lead-tel" type="tel" placeholder="WhatsApp (+39 / +55...)" style="width:100%;padding:0.85rem 1rem;border:1.5px solid #e0e0e0;border-radius:10px;font-size:0.95rem;margin-bottom:1.4rem;box-sizing:border-box;font-family:inherit;" onfocus="this.style.borderColor='#9B2D6E'" onblur="this.style.borderColor='#e0e0e0'">
+    <button onclick="submitLead()" style="width:100%;background:var(--yellow);color:var(--navy-deep);border:none;border-radius:10px;padding:1.1rem;font-size:0.88rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:inherit;">QUERO MEU INGRESSO AGORA →</button>
+    <p style="text-align:center;font-size:0.72rem;color:#bbb;margin-top:0.8rem;">🔒 Seus dados estão seguros. Você será redirecionado para o pagamento.</p>
   </div>
 </div>
 <script>
