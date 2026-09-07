@@ -501,7 +501,9 @@
     .ideal-card:nth-child(even) { direction: ltr; }
   }
 
-  .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+  .testimonials-wrap { padding: 2.5rem 0 3rem; }
+  .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  @media (max-width:900px) { .testimonials { grid-template-columns: 1fr; } }
   .tcard { background: #fff; border-radius: 14px; padding: 1.6rem; box-shadow: 0 4px 24px rgba(15,18,56,0.07); border: 1px solid rgba(15,18,56,0.06); }
   .tcard-quote { font-size: 0.95rem; line-height: 1.65; color: #333; font-style: italic; margin-bottom: 1.2rem; }
   .tcard-author { display: flex; align-items: center; gap: 0.8rem; }
@@ -591,7 +593,10 @@
     <div>
       <p class="lead">Os Brasileiros Inspiradores é uma rede de capacitação e networking de brasileiros que estão tendo grandes resultados no mercado europeu e uniram-se para fortalecer empreendedores através do desenvolvimento profissional e pessoal.</p>
       <p class="quote">Um ambiente descontraído, criativo e inovador — onde o resultado não é só o que você ouve, é com quem você sai do evento conectado.</p>
-      <div class="testimonials">
+    </div>
+  </div>
+  <div class="container testimonials-wrap">
+    <div class="testimonials">
         <div class="tcard">
           <div class="tcard-quote">"Saí do evento com dois clientes novos e uma parceria que mudou o rumo do meu negócio na Europa."</div>
           <div class="tcard-author">
@@ -622,7 +627,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </section>
