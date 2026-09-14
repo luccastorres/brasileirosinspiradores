@@ -973,7 +973,7 @@
   function update(){
     var now = new Date();
     var diff = target - now;
-    if(diff <= 0){ document.querySelector('.hero-countdown').innerHTML = '<div class="cd-label" style="color:var(--yellow)">O evento já começou!</div>'; return; }
+    if(diff <= 0){ var tb = document.getElementById('cd-topbar'); if(tb) tb.innerHTML = '<span style="color:var(--navy-deep);font-weight:700;">O evento já começou!</span>'; return; }
     var d = Math.floor(diff/86400000);
     var h = Math.floor((diff%86400000)/3600000);
     var m = Math.floor((diff%3600000)/60000);
