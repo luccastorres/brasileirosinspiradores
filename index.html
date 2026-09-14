@@ -510,6 +510,40 @@
   .tcard-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--magenta); color: #fff; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .tcard-name { font-weight: 700; font-size: 0.88rem; color: var(--navy-deep); }
   .tcard-role { font-size: 0.75rem; color: #888; margin-top: 0.1rem; }
+
+  @media (max-width: 900px) {
+    /* Hide duplicate hero logo on mobile */
+    .hero-inner > img.h-logo { display: none; }
+
+    /* Tighten hero padding */
+    .hero { padding: 4rem 0 3rem; }
+
+    /* Hero content single column, full width */
+    .hero-content { grid-template-columns: 1fr; padding: 0 1.2rem; }
+
+    /* Bigger, readable headline */
+    .hero h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); margin-bottom: 1.2rem; }
+
+    /* Meta items smaller */
+    .hero-meta { gap: 0.8rem; flex-wrap: wrap; }
+    .hero-meta-item { font-size: 0.82rem; }
+
+    /* CTA buttons full width on mobile */
+    .hero-inner .btn { display: block; width: 100%; text-align: center; margin-left: 0 !important; margin-bottom: 0.6rem; box-sizing: border-box; }
+
+    /* Hero tag smaller */
+    .hero-tag { font-size: 0.65rem; margin-top: 1rem; }
+
+    /* Countdown topbar compact */
+    #cd-topbar { padding: 0; height: 36px; gap: 0.5rem; }
+    .cd-box { min-width: 34px; padding: 0.2rem 0.4rem; }
+    .cd-box span { font-size: 0.9rem; }
+    .cd-unit { font-size: 0.4rem; }
+    .cd-sep { font-size: 0.9rem; padding-bottom: 0.6rem; }
+
+    /* Nav sits right below topbar */
+    nav { top: 36px; }
+  }
 </style>
 </head>
 <body>
