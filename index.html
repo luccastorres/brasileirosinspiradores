@@ -497,8 +497,11 @@
   .ideal-card img { width: 100%; border-radius: 16px; aspect-ratio: 3/4; object-fit: cover; }
   .ideal-info { padding: 1rem 0; }
   @media (max-width: 900px) {
-    .ideal-card { grid-template-columns: 1fr; direction: ltr; }
-    .ideal-card:nth-child(even) { direction: ltr; }
+    .ideal-card { grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .ideal-card img { border-radius: 10px; }
+    .ideal-info { padding: 0.5rem 0; }
+    .ideal-info h3 { font-size: 1.1rem; }
+    .ideal-info p { font-size: 0.82rem; }
   }
 
   .testimonials-wrap { padding: 2.5rem 0 3rem; }
