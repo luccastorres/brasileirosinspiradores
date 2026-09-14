@@ -488,7 +488,7 @@
   .cd-box span { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--navy-deep); display: block; line-height: 1; }
   .cd-unit { font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(15,18,56,0.55); margin-top: 0.15rem; }
   .cd-sep { font-size: 1rem; color: var(--navy-deep); font-weight: 700; padding-bottom: 0.8rem; }
-  @media (max-width:600px){ #cd-topbar span:first-child { display:none; } }
+  @media (max-width:600px){ #cd-topbar > span:first-child { display:none; } #cd-topbar > a { display:none; } .cd-box { min-width:36px; padding:0.2rem 0.5rem; } .cd-box span { font-size:1rem; } .cd-sep { font-size:0.9rem; } }
 
   .ideal-grid { display: flex; flex-direction: column; gap: 4rem; }
   .ideal-card { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -544,13 +544,13 @@
     .cd-sep { font-size: 0.9rem; padding-bottom: 0.6rem; }
 
     /* Nav sits right below topbar */
-    nav { top: 36px; }
+    nav { top: 44px; }
   }
 </style>
 </head>
 <body>
 <!-- COUNTDOWN TOPBAR -->
-<div id="cd-topbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--yellow);display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:0;height:40px;flex-wrap:nowrap;overflow:hidden;">
+<div id="cd-topbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--yellow);display:flex;align-items:center;justify-content:center;gap:0.8rem;padding:0.4rem 0.8rem;flex-wrap:nowrap;">
   <span style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-deep);font-weight:700;white-space:nowrap;">10.10.2026 · Milão · O evento começa em</span>
   <div class="cd-boxes">
     <div class="cd-box"><span id="cd-days">00</span><div class="cd-unit">dias</div></div>
