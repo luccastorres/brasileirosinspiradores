@@ -60,7 +60,7 @@
      ============================================================ */
   nav {
     position: fixed;
-    top: 40px; left: 0; right: 0; z-index: 100;
+    top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0.6rem 2rem;
     background: rgba(15, 18, 56, 0);
@@ -496,8 +496,7 @@
   .cd-box span { font-size:0.85rem; }
   .cd-unit { font-size:0.38rem; }
   .cd-sep { font-size:0.8rem; padding-bottom:0.5rem; }
-  nav { top: 52px !important; }
-  .hero { padding-top: 6rem !important; }
+
 }
 
   .ideal-grid { display: flex; flex-direction: column; gap: 4rem; }
@@ -1075,6 +1074,20 @@ function toggleMute(){
   v.muted = !v.muted;
   btn.textContent = v.muted ? '🔇' : '🔊';
 }
+</script>
+
+<script>
+function fixNavPosition() {
+  var topbar = document.getElementById('cd-topbar');
+  var nav = document.getElementById('nav');
+  var hero = document.querySelector('.hero');
+  if (!topbar || !nav) return;
+  var h = topbar.offsetHeight;
+  nav.style.top = h + 'px';
+  if (hero) hero.style.paddingTop = (h + nav.offsetHeight + 16) + 'px';
+}
+window.addEventListener('load', fixNavPosition);
+window.addEventListener('resize', fixNavPosition);
 </script>
 </body>
 </html>
