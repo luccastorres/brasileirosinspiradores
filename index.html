@@ -113,7 +113,7 @@
      ============================================================ */
   .hero {
     min-height: auto;
-    padding: 6rem 0 4rem;
+    padding: 7.5rem 0 4rem;
     background: var(--navy-deep);
     display: flex; align-items: center;
     position: relative; overflow: hidden;
@@ -488,7 +488,17 @@
   .cd-box span { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--navy-deep); display: block; line-height: 1; }
   .cd-unit { font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(15,18,56,0.55); margin-top: 0.15rem; }
   .cd-sep { font-size: 1rem; color: var(--navy-deep); font-weight: 700; padding-bottom: 0.8rem; }
-  @media (max-width:600px){ #cd-topbar > span:first-child { display:none; } #cd-topbar > a { display:none; } .cd-box { min-width:36px; padding:0.2rem 0.5rem; } .cd-box span { font-size:1rem; } .cd-sep { font-size:0.9rem; } }
+  @media (max-width:600px){
+  #cd-topbar > span:first-child { display:none; }
+  #cd-topbar > a { display:none; }
+  #cd-topbar { padding:0.3rem 0.5rem; gap:0.4rem; flex-wrap:nowrap; }
+  .cd-box { min-width:32px; padding:0.15rem 0.4rem; }
+  .cd-box span { font-size:0.85rem; }
+  .cd-unit { font-size:0.38rem; }
+  .cd-sep { font-size:0.8rem; padding-bottom:0.5rem; }
+  nav { top: 52px !important; }
+  .hero { padding-top: 6rem !important; }
+}
 
   .ideal-grid { display: flex; flex-direction: column; gap: 4rem; }
   .ideal-card { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -547,7 +557,7 @@
     .cd-sep { font-size: 0.9rem; padding-bottom: 0.6rem; }
 
     /* Nav sits right below topbar */
-    nav { top: 44px; }
+
     #track { padding: 3rem 0; }
     .track-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem !important; }
     .track-stats > div > div:first-child { font-size: 2rem !important; }
